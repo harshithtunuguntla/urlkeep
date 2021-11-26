@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+    <div class="row align-items-center">
+        <div class="col-md-12">
+            <h2>Harshiths URL Shortner</h2>
+        </div>
+    </div>
+
+     
+
+    <form action="{{ url_for('begin') }}", method = "post">
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Enter URL Here</span>
+            <input type="url" name = "entered_url" id = "url" class="form-control" placeholder="URL" aria-label="URL" aria-describedby="basic-addon1">
+        </div>
+
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Enter keyword Here</span>
+            <input type="text" name = "entered_keyword" id = "keyword" class="form-control" placeholder="Keyword" aria-label="Keyword" aria-describedby="basic-addon1">
+        </div>
+
+
+        <div class="row align-items-center">
+            
+            <div class="col-md-1">
+                <input type="submit" value="submit" class="btn btn-primary">
+            </div>
+        </div>
+    </form>
+
+    <h2 id="replacelink">Link Appears Here</h2>
+    
+
+    <script>
+
+        if("{{status}}"==0)
+        {
+            alert("Already Exists Bro");
+        }
+        else{
+            document.getElementById("replacelink").innerHTML = "{{link}}";
+        }
+        
+
+    </script>
+
+
+</body>
+</html>

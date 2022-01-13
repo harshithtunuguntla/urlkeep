@@ -318,9 +318,7 @@
                         <input type="text" name="entered_keyword" class="form-control color-boxes" id="keyword"
                             placeholder="Enter Your keyword Here" required>
                     </div>
-                    <div class="row justify-content-center noteline offset-3">
-                        Note : Keywords that have been used already will not work.
-                    </div>
+                    
                     <div class="row" style="width: 50%; margin-top: 5px;">
                         <button type="submit" value="submit" class="btn color-btn">Generate URL</button>
                     </div>
@@ -328,6 +326,9 @@
 
             </form>
 
+            <div class="row justify-content-center noteline offset-3">
+                Note : Keywords that have been used already will not work.
+            </div>
 
 
 
@@ -345,7 +346,7 @@
                     URL
                 </div>
 
-                <div id="theurl" class="row colorurlbox text-white justify-content-center" style="display: flex; align-items: center;justify-content: center; text-align: 
+                <div id="thenewurl" class="row colorurlbox text-white justify-content-center" style="display: flex; align-items: center;justify-content: center; text-align: 
                     center;">
                     https://harshithurl.herokuapp.com/&lt;Keyword appears here&gt;
                 </div>
@@ -404,6 +405,8 @@
         else if ("{{status}}" == 1) {
             document.getElementById("errorcode").innerHTML = "URL Succesfully Generated!!!!!";
             document.getElementById("theurl").innerHTML = "{{link}}";
+            document.getElementById("thenewurl").innerHTML = "{{link}}";
+            console.log("atleast inside");
         }
         else {
             //pass

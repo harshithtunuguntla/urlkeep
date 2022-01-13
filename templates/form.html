@@ -334,8 +334,8 @@
 
             <br>
 
-            <div class="row align-items-center justify-content-center errorline" id="errorcode">
-                <div class="col d-flex justify-content-center text-center"> </div>
+            <div class="row align-items-center justify-content-center errorline" >
+                <div class="col d-flex justify-content-center text-center" id="newerrorcode"> </div>
             </div>
 
             <hr>
@@ -401,9 +401,13 @@
 
         if ("{{status}}" == 0) {
             document.getElementById("errorcode").innerHTML = "This keyword is already taken please try again!";
+            document.getElementById("newerrorcode").innerHTML = "This keyword is already taken please try again!";
+
         }
         else if ("{{status}}" == 1) {
             document.getElementById("errorcode").innerHTML = "URL Succesfully Generated!!!!!";
+            document.getElementById("newerrorcode").innerHTML = "URL Succesfully Generated!!!!!";
+
             document.getElementById("theurl").innerHTML = "{{link}}";
             document.getElementById("thenewurl").innerHTML = "{{link}}";
             console.log("atleast inside");

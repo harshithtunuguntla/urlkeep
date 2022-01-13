@@ -5,7 +5,12 @@ URL Keep is a simple application where you can simplify your complex URLS into s
 
 # Working URL
 
-Checkout my website on http://harshithurl.herokuapp.com/
+Working URL http://harshithurl.herokuapp.com/
+
+# Demo
+
+https://user-images.githubusercontent.com/53993341/149301414-d4272265-97bd-4a0a-8251-6f3a46411d92.mp4
+
 
 # Screenshots
 
@@ -14,6 +19,7 @@ Checkout my website on http://harshithurl.herokuapp.com/
 
 # Working Model
 
-In the URL Box you can give any big URL you wish, and give any keyword you like (it wont work if other people already opted for that 😶). We will generate you the link with the keyword you asked for !!
+In the URL Box you can give any big URL you wish, and give any keyword you like (it wont work if other people already opted for that 😶). This web app will generate you the link with the keyword you asked for in a new route!!
+This route will redirect you the main URL you inserted!
 
 Enjoy shortening!

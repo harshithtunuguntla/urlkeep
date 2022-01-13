@@ -1,98 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
-     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'> 
-     <link href='https://fonts.googleapis.com/css?family=Inter:800,800italic,600,600italic,700,700italic,900,900italic%7CLato:300,300italic,700,700italic,400,400italic,900,900italic%7CSource+Sans+Pro:600,600italic,400,400italic,300,300italic,900,900italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Inter:800,800italic,600,600italic,700,700italic,900,900italic%7CLato:300,300italic,700,700italic,400,400italic,900,900italic%7CSource+Sans+Pro:600,600italic,400,400italic,300,300italic,900,900italic,700,700italic'
+        rel='stylesheet' type='text/css'>
     <title>URL Keep</title>
 
     <style>
-        body{
+        body {
             background-color: #FFFFFF;
         }
-        .mainhead{
+
+        .mainhead {
             font-family: 'Inter', sans-serif;
             font-size: 75px;
-            font-weight:800;
+            font-weight: 800;
             color: #1864FF;
         }
 
-        .tagline1{
+        .tagline1 {
             color: #ff8818;
             font-family: 'Lato', sans-serif;
             font-size: 15px;
         }
 
-        .tagline{
+        .tagline {
             color: #1864FF;
             font-family: 'Lato', sans-serif;
             font-size: 15px;
         }
 
-        .color-btn{
+        .color-btn {
             background-color: #1864FF;
             font-family: 'Lato', sans-serif;
             color: white;
             font-size: 15px;
         }
 
-        .color-boxes{
+        .color-boxes {
             border-color: #1864FF;
             font-family: 'Lato', sans-serif;
             color: #1864FF;
             font-size: 15px;
         }
 
-        .noteline{
+        .noteline {
             color: #ff8818;
             font-family: 'Lato', sans-serif;
             font-size: 10px;
         }
 
-        .colorurlbox{
+        .colorurlbox {
             background-color: #ff8818;
             font-family: 'Lato', sans-serif;
             font-size: 20px;
+
         }
 
-        .colorurlboxurl{
+        .colorurlboxurl {
             background-color: #1864FF;
             font-family: 'Lato', sans-serif;
             color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
         }
 
-        .pointerclass{
+        .pointerclass {
             cursor: pointer;
             border-color: black;
         }
-      
-        .errorline{
+
+        .errorline {
             color: brown;
             font-size: 25px;
         }
 
+        .bordernew {
+            display: none;
+        }
 
+        hr {
+            border: 1px solid #ff8818;
+        }
+
+
+        @media only screen and (max-width:62rem) {
+
+
+            .borderold {
+                display: none;
+            }
+
+            .bordernew {
+                display: inline-block;
+            }
+
+        }
+
+        @media only screen and (max-width:52rem) {
+
+
+            .borderold {
+                display: none;
+            }
+
+            .bordernew {
+                display: inline-block;
+                border-width: 10rem;
+                margin-left: 1rem;
+                padding: 1rem;
+
+            }
+
+        }
+
+        @media only screen and (max-width:45rem) {
+
+
+            .btn {
+                font-size: 10px;
+            }
+
+            .borderold {
+                border-width: 10rem;
+                margin-left: 1rem;
+                padding-right: 2rem;
+            }
+
+            svg {
+                width: 20px;
+                height: 25px;
+            }
+
+            .mainhead {
+                align-self: center;
+                font-size: 45px;
+                margin-left: 1.5rem;
+            }
+
+            .tagline {
+                margin-left: 1.5rem;
+            }
+
+            .tagline1 {
+                margin-left: 1.5rem;
+            }
+
+            .noteline {
+                margin-left: 1rem;
+            }
+
+            .old {
+                display: none;
+            }
+
+            .new {
+                display: inline-block;
+            }
+
+            .bordernew {
+
+                border-width: 10rem;
+                margin-left: 0.2rem;
+                padding: 1rem;
+
+            }
+
+
+        }
     </style>
-    
+
 </head>
+
 <body>
 
-   
+
     <div class="container">
 
         <br>
         <div class="row">
             <div class="col offset-11 ">
-                <button type="button" class="btn btn-outline-dark btn-sm" onclick="DarkMode()" style="display: inherit;" id="darkmodebutton">Dark Mode</button>
+                <button type="button" class="btn btn-outline-dark btn-sm" onclick="DarkMode()" style="display: inherit;"
+                    id="darkmodebutton">Dark Mode</button>
             </div>
 
             <div class="col offset-11">
-                <button type="button" class="btn btn-outline-light btn-sm" onclick="LightMode()" style="display: none;" id="lightmodebutton">Light Mode</button>
+                <button type="button" class="btn btn-outline-light btn-sm" onclick="LightMode()" style="display: none;"
+                    id="lightmodebutton">Light Mode</button>
             </div>
         </div>
 
@@ -110,14 +215,15 @@
             <span>Facing difficulty in storing and <strong>finding links?</strong>...  Well here is the solution!</span>
         </div> -->
 
-        <div class="row-fluid" >
+        <div class="row-fluid">
             <div class="span12 text-center tagline1">
-            <span>Facing difficulty in storing <strong>big links?</strong>...  Well here is the solution!</span>
+                <span>Facing difficulty in storing <strong>big links?</strong>... Well here is the solution!</span>
             </div>
         </div>
-        <div class="row-fluid" >
+        <div class="row-fluid">
             <div class="span12 text-center tagline">
-            <span>You can convert your <strong>long urls</strong> into <strong>smart urls</strong>with your unique keywords! </span>
+                <span>You can convert your <strong>long urls</strong> into <strong>smart urls</strong>with your unique
+                    keywords! </span>
             </div>
         </div>
 
@@ -128,76 +234,162 @@
         <br>
         <br>
 
-    <div class="border border-primary rounded" style="border-width: 20px;">
-        <br>
+        <!-- Old starts here" -->
+        <div class="borderold border-primary rounded old">
+            <br>
 
-            
-        <form action="{{ url_for('begin') }}", method = "post">
 
-            <div class="row justify-content-center">
-                <div class="col-4 offset-1">
-                    <!-- <label for="exampleFormControlInput1" class="form-label">Email address</label> -->
-                    <input type="url" name="entered_url" class="form-control color-boxes" id="url" placeholder="Enter Your URL Here" required>
-                  </div>
-                  <div class="col-3">
-                    <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
-                    <input type="text" name = "entered_keyword" class="form-control color-boxes" id="keyword" placeholder="Enter Your keyword Here" required>
-                  </div>
-                  <div class="col-2">
-                    <button type="submit" value="submit" class="btn color-btn">Generate URL</button>
-                  </div>
+            <form action="{{ url_for('begin') }}" , method="post">
+
+                <div class="row justify-content-center">
+                    <div class="col-4 offset-1">
+                        <!-- <label for="exampleFormControlInput1" class="form-label">Email address</label> -->
+                        <input type="url" name="entered_url" class="form-control color-boxes" id="url"
+                            placeholder="Enter Your URL Here" required>
+                    </div>
+                    <div class="col-3">
+                        <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                        <input type="text" name="entered_keyword" class="form-control color-boxes" id="keyword"
+                            placeholder="Enter Your keyword Here" required>
+                    </div>
+                    <div class="col-2">
+                        <button type="submit" value="submit" class="btn color-btn">Generate URL</button>
+                    </div>
+                </div>
+
+            </form>
+
+
+            <div class="row justify-content-center noteline offset-3">
+                Note : Keywords that have been used already will not work.
             </div>
 
-        </form>
+            <br>
+
+            <div class="row errorline offset-4" id="errorcode">
+
+            </div>
 
 
-        <div class="row justify-content-center noteline offset-3">
-            Note : Keywords that have been used already will not work.
+
+            <div class="row">
+                <div class="col-1 p-1  colorurlboxurl justify-content-center offset-2">
+                    URL
+                </div>
+
+                <div id="theurl" class="col-7 p-1 colorurlbox text-white justify-content-center"
+                    style="display: flex; align-items: center;justify-content: center;">
+                    https://harshithurl.herokuapp.com/&lt;Keyword appears here&gt;
+                </div>
+                <div class="col-2 p-3 pointerclass">
+                    <h1 onclick="copy_to_clipboard()" id="svgdark" style="display: inherit;">
+                        <svg id="clipboardicon" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
+                            class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path id="path1"
+                                d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                            <path id="path2"
+                                d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                        </svg>
+                    </h1>
+                </div>
+            </div>
+
+            <br>
         </div>
 
-        <br>
+        <!-- Old ends here -->
 
-        <div class="row errorline offset-4" id="errorcode">
-           
+        <!-- New Starts Here -->
+        <div class="bordernew border-primary rounded new">
+            <br>
+
+
+            <form action="{{ url_for('begin') }}" , method="post">
+
+                <div class="row justify-content-center">
+                    <div class="row" style="margin-bottom: 10px;">
+                        <!-- <label for="exampleFormControlInput1" class="form-label">Email address</label> -->
+                        <input type="url" name="entered_url" class="form-control color-boxes" id="url"
+                            placeholder="Enter Your URL Here" required>
+                    </div>
+
+                    <div class="row">
+                        <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                        <input type="text" name="entered_keyword" class="form-control color-boxes" id="keyword"
+                            placeholder="Enter Your keyword Here" required>
+                    </div>
+                    <div class="row justify-content-center noteline offset-3">
+                        Note : Keywords that have been used already will not work.
+                    </div>
+                    <div class="row" style="width: 50%; margin-top: 5px;">
+                        <button type="submit" value="submit" class="btn color-btn">Generate URL</button>
+                    </div>
+                </div>
+
+            </form>
+
+
+
+
+            <br>
+
+            <div class="row align-items-center justify-content-center errorline" id="errorcode">
+                <div class="col d-flex justify-content-center text-center"> </div>
+            </div>
+
+            <hr>
+
+
+            <div class="col">
+                <div class="row colorurlboxurl justify-content-center ">
+                    URL
+                </div>
+
+                <div id="theurl" class="row colorurlbox text-white justify-content-center" style="display: flex; align-items: center;justify-content: center; text-align: 
+                    center;">
+                    https://harshithurl.herokuapp.com/&lt;Keyword appears here&gt;
+                </div>
+
+                <!-- Copy Icon Starts-->
+
+                <!-- <div class="row pointerclass">
+                    <h1 onclick="copy_to_clipboard()" id="svgdark" style="display: inherit;">
+                        <svg id="clipboardicon" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
+                            class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path id="path1"
+                                d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                            <path id="path2"
+                                d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                        </svg>
+                    </h1>
+                </div> -->
+                <!-- Copy Icon Ends -->
+            </div>
+
+            <br>
+
+
+
         </div>
 
-      
+        <!-- New ends here -->
 
-        <div class="row">
-            <div class="col-1 p-1  colorurlboxurl justify-content-center offset-2" style="display: flex; align-items: center;justify-content: center; font-size: 25px;">
-                URL
-            </div>
 
-            <div id="theurl" class="col-7 p-1 colorurlbox text-white justify-content-center" style="display: flex; align-items: center;justify-content: center;">
-                https://harshithurl.herokuapp.com/&lt;Keyword appears here&gt;
-            </div>
-            <div class="col-2 p-3 pointerclass">
-                <h1 onclick="copy_to_clipboard()" id ="svgdark" style="display: inherit;">
-                    <svg id="clipboardicon" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black" class="bi bi-clipboard" viewBox="0 0 16 16">
-                        <path id="path1" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
-                        <path id="path2"  d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
-                      </svg>
-                </h1>
-            </div>
-        </div>
+
 
         <br>
+        <br>
 
-        
-        
-    </div>
 
-    <br>
-
-    <div id="developedtext" class="row justify-content-center noteline" style="color: black;">
-        Developed By Harshith Tunuguntla 😁
-    </div>
+        <div id="developedtext" class="row justify-content-center noteline" style="color: black;">
+            Developed By Harshith Tunuguntla 😁
+        </div>
 
 
     </div>
 
 
-    
+
 
     <!-- <div id="developedtext" style="padding-right: 5px; float:right; color:black">
         Developed By Harshith Tunuguntla 😁
@@ -205,21 +397,20 @@
 
     <script>
 
-        
-        if("{{status}}"==0)
-        {
+
+        if ("{{status}}" == 0) {
             document.getElementById("errorcode").innerHTML = "This keyword is already taken please try again!";
         }
-        else if("{{status}}"==1){
+        else if ("{{status}}" == 1) {
             document.getElementById("errorcode").innerHTML = "URL Succesfully Generated!!!!!";
             document.getElementById("theurl").innerHTML = "{{link}}";
         }
-        else{
+        else {
             //pass
         }
-        
 
-        function copy_to_clipboard(){
+
+        function copy_to_clipboard() {
             var copyText = document.getElementById("theurl").textContent;
             console.log(copyText);
 
@@ -232,32 +423,31 @@
 
         }
 
-        $('#darkmodebutton').on("click", function() {
-            $('#path1, #path2').attr({ fill: "#ffffff" });
-        });
+        // $('#darkmodebutton').on("click", function () {
+        //     $('#path1, #path2').attr({ fill: "#ffffff" });
+        // });
 
-        function DarkMode()
-        {
-            document.getElementById("darkmodebutton").style.display="none";
+        function DarkMode() {
+            document.getElementById("darkmodebutton").style.display = "none";
             document.getElementById("lightmodebutton").style.display = "inherit";
             document.body.style.background = "black";
-            document.getElementById("developedtext").style.color="white";
+            document.getElementById("developedtext").style.color = "white";
             // $('#path1, #path2').css({ fill: "#ffffff" });
-            document.getElementById("clipboardicon").style.fill="white"
+            document.getElementById("clipboardicon").style.fill = "white"
 
         }
 
-        function LightMode()
-        {
-            document.getElementById("darkmodebutton").style.display="inherit";
+        function LightMode() {
+            document.getElementById("darkmodebutton").style.display = "inherit";
             document.getElementById("lightmodebutton").style.display = "none";
             document.body.style.background = "white";
-            document.getElementById("developedtext").style.color="black";
-            document.getElementById("clipboardicon").style.fill="black"
+            document.getElementById("developedtext").style.color = "black";
+            document.getElementById("clipboardicon").style.fill = "black"
         }
 
-        
+
     </script>
 
 </body>
+
 </html>

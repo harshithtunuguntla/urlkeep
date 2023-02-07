@@ -52,7 +52,7 @@ def begin():
             collection.insert_one(new_item)
             status = 1
 
-        return render_template("form.html", status=status,link="https://harshithurl.herokuapp.com/" + str(keyword_received))
+        return render_template("form.html", status=status,link="https://harshithurl.up.railway.app/" + str(keyword_received))
 
     else:
         return render_template("form.html", status=status)
